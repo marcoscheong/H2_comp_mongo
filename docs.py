@@ -8,5 +8,11 @@ with open('students.csv', 'r') as f:
         doc['class_id'] = int(doc['class_id'])
         doc['student_id'] = int(doc['student_id'])
         doc['year_enrolled'] = int(doc['year_enrolled'])
+
+        if doc['graduated'] == 'FALSE':
+            doc['graduated'] = False
+
+        else:
+            doc['graduated'] = True
         document.append(doc)
         
